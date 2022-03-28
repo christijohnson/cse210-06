@@ -1,5 +1,5 @@
 import random
-import holy_war.constants as constants
+import constants
 from game.shared.color import Color
 from game.casting.cast import Cast
 from game.casting.actor import Actor
