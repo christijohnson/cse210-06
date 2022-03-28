@@ -1,4 +1,4 @@
-import holy_war.constants as constants
+import constants
 
 from game.casting.cast import Cast
 from game.casting.food import Food

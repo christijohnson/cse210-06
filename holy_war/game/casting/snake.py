@@ -1,4 +1,4 @@
-import holy_war.constants as constants
+import constants
 from game.casting.actor import Actor
 from game.shared.point import Point
 import random
