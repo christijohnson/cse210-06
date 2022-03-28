@@ -1,4 +1,4 @@
-import constants
+import holy_war.constants as constants
 from game.shared.color import Color
 from game.shared.point import Point
 

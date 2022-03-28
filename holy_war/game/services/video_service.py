@@ -1,5 +1,5 @@
 import pyray
-import constants
+import holy_war.constants as constants
 
 
 class VideoService:
