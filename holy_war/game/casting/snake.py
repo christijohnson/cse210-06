@@ -73,11 +73,6 @@ class Snake(Actor):
         for i in range(constants.SNAKE_LENGTH):
             position = Point(x - i * constants.CELL_SIZE, y)
             velocity = Point(1 * constants.CELL_SIZE, 0)
-            # text = "8" if i == 0 else "#"
-            # text1 = "8" if i == 0 else "/" 
-            # text2 = "0" if i % 2 else "-"
-            # text = text1 if i % 2 else text2
-
             
             text_list = [47,92]
             text = "8" if i == 0 else chr(random.choice(text_list)) 
