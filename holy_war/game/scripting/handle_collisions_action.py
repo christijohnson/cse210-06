@@ -129,7 +129,10 @@ class HandleCollisionsAction(Action):
             snake2 = snakes[1]
             segments1 = snake1.get_segments()
             segments2 = snake2.get_segments()
-            food = cast.get_first_actor("foods")
+            food = cast.get_actors("foods")
+            food1 = food[0]
+            food2 = food[1]
+            food3 = food[2]
 
             x = int(constants.MAX_X / 2)
             y = int(constants.MAX_Y / 2)
@@ -143,41 +146,37 @@ class HandleCollisionsAction(Action):
 
             for segment in segments1:
                 segment.set_color(constants.RED) 
-            food.set_color(constants.RED)
 
             for segment in segments2:
                 segment.set_color(constants.RED)
-            food.set_color(constants.YELLOW)
+            food1.set_color(constants.RED)
+            food2.set_color(constants.RED)
+            food3.set_color(constants.RED)
             message.set_text("You are a U fan!")  
 
         if self._player2_wins:
 
             for segment in segments1:
                 segment.set_color(constants.BLUE)
-            food.set_color(constants.BLUE)
 
             for segment in segments2:
                 segment.set_color(constants.BLUE)
-            food.set_color(constants.YELLOW)
+
+            food1.set_color(constants.BLUE)
+            food2.set_color(constants.BLUE)
+            food3.set_color(constants.BLUE)
             message.set_text("U Who?")  
     
     def _win_by_points(self, cast):
 
         score = cast.get_actors("scores")
-        snakes = cast.get_actors("snakes")
+        score1 = score[0].get_points()
+        score2 = score[1].get_points()
 
-        snake1 = snakes[0]
-        snake2 = snakes[1]
-
-        score1 = score[0]
-        score2 = score[1]
-
-        if score1._points >= 10:
-            self._is_game_over
-            self._player1_wins
+        if score1 >= 20:
+            self._is_game_over = True
+            self._player1_wins = True
         
-        if score2._points >= 0:
-            self._is_game_over
-            self._player2_wins
-
-        # self._handle_game_over(cast)
+        if score2 >= 20:
+            self._is_game_over = True
+            self._player2_wins = True

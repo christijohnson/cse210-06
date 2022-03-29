@@ -26,8 +26,8 @@ class Food(Actor):
     def reset(self):
         """Selects a random position and points that the food is worth."""
         self._points = random.randint(1, 8)
-        x = random.randint(1, constants.MAX_X - 1)
-        y = random.randint(1, constants.MAX_Y - 1)
+        x = random.randint(20, constants.MAX_X - 20)
+        y = random.randint(20, constants.MAX_Y - 20)
         position = Point(x, y)
         position = position.scale(constants.CELL_SIZE)
         
