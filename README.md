@@ -20,8 +20,7 @@ Christi Johnson   joh21088@byui.edu
 
 # Holy War game 
 
-Holy War is a game where the players try to cut each other off using snakes representing Utah State Univeristy 
-(Red) and Brigham Young University (Blue).  
+Holy War is a game where the players try to cut each other off using snakes representing the Univeristy of Utah (Red) and Brigham Young University (Blue).  
 
 Holy war is played according to the following rules.
 
